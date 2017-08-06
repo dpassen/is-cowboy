@@ -15,10 +15,10 @@ describe('is-cowboy', function () {
     });
 
     it('handles cowboys', function () {
-        assert(cowboy('\u{1F920}') == true);
+        assert(cowboy('\uD83E\uDD20') == true);
     });
 
-    it('handles other unicode strings', function () {
-        assert(cowboy('\u{1F937}') == false);
+    it('handles other unicode surrogate pairs', function () {
+        assert(cowboy('\uD83E\uDD37') == false);
     });
 });
